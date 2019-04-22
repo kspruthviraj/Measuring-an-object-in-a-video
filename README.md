@@ -12,6 +12,5 @@ Here, width 24.25 is the width of left most reference object in the video.
 Example output:
 
 
-![Example_Output] (Example_Output.gif)
-
+<img src="Example_Output.gif?raw=true" width="200px">
 
