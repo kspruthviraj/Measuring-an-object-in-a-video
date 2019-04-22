@@ -5,15 +5,6 @@ Created on Mon Apr 22 17:13:30 2019
 @author: pruthvi
 """
 
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Apr 17 21:42:32 2019
-
-@author: pruthvi
-"""
-
-#%%
-
 #%%
         
  # import the necessary packages
