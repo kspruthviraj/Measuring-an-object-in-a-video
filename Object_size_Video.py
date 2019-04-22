@@ -17,9 +17,6 @@ import imutils
 import cv2
 import time
 
-def midpoint(ptA, ptB):
-	return ((ptA[0] + ptB[0]) * 0.5, (ptA[1] + ptB[1]) * 0.5)
-
 # construct the argument parse and parse the arguments
 ap = argparse.ArgumentParser()
 ap.add_argument("-i", "--input", required=True,
@@ -32,6 +29,9 @@ ap.add_argument("-w", "--width", type=float, required=True,
 #    help="how many pixel are in one inch / cm. Supply 1 if you want the object size in units of pixel")
 args = vars(ap.parse_args())
 
+
+def midpoint(ptA, ptB):
+	return ((ptA[0] + ptB[0]) * 0.5, (ptA[1] + ptB[1]) * 0.5)
 
 # initialize the video stream, pointer to output video file, and
 # frame dimensions
@@ -137,7 +137,7 @@ while True:
     
 	    # if the pixels per metric has not been initialized, then
 	    # compute it as the ratio of pixels to supplied metric
-	    # (in this case, inches)
+	    # (in this case, millimeters)
 	    if pixelsPerMetric is None:
 		    pixelsPerMetric = dB / args["width"] # args["width"]
             
@@ -169,31 +169,4 @@ while True:
 print("[INFO] cleaning up...")
 writer.release()
 vs.release()
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
