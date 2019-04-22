@@ -1,4 +1,4 @@
-# Measuring-object-in-a-video
+# Measuring-an-object-in-a-video
 
 This is python script to measure the object in a video with respect to a refernce image.
 
