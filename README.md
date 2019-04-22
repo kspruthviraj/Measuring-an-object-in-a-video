@@ -12,6 +12,6 @@ Here, width 24.25 is the width of left most reference object in the video.
 Example output:
 
 
-![Example_Output] (https://github.com/kspruthviraj/Measuring-object-in-a-video/blob/master/Example_Output.gif)
+![Example_Output] (Example_Output.gif)
 
 
