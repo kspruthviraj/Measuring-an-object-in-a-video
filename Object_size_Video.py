@@ -6,6 +6,7 @@ Created on Mon Apr 22 17:13:30 2019
 """
 
 #%%
+
         
  # import the necessary packages
 from scipy.spatial import distance as dist
@@ -16,6 +17,9 @@ import argparse
 import imutils
 import cv2
 import time
+
+def midpoint(ptA, ptB):
+	return ((ptA[0] + ptB[0]) * 0.5, (ptA[1] + ptB[1]) * 0.5)
 
 # construct the argument parse and parse the arguments
 ap = argparse.ArgumentParser()
@@ -29,9 +33,6 @@ ap.add_argument("-w", "--width", type=float, required=True,
 #    help="how many pixel are in one inch / cm. Supply 1 if you want the object size in units of pixel")
 args = vars(ap.parse_args())
 
-
-def midpoint(ptA, ptB):
-	return ((ptA[0] + ptB[0]) * 0.5, (ptA[1] + ptB[1]) * 0.5)
 
 # initialize the video stream, pointer to output video file, and
 # frame dimensions
@@ -66,9 +67,8 @@ while True:
         (H,W) = frame.shape[:2]
     
     start = time.time()
-    end = time.time()
     
-    # Operations on the grabbed frame   
+    # Image processing operations on the frame    
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     gray = cv2.GaussianBlur(gray, (7, 7), 0)
     
@@ -137,7 +137,7 @@ while True:
     
 	    # if the pixels per metric has not been initialized, then
 	    # compute it as the ratio of pixels to supplied metric
-	    # (in this case, millimeters)
+	    # (in this case, inches)
 	    if pixelsPerMetric is None:
 		    pixelsPerMetric = dB / args["width"] # args["width"]
             
@@ -152,6 +152,7 @@ while True:
 #	    # show the output image
 	    cv2.imshow("Image", orig)
 #	    cv2.waitKey(0)
+    end = time.time()
 
     if writer is None:
         fourcc = cv2.VideoWriter_fourcc(*"MJPG")
@@ -169,4 +170,4 @@ while True:
 print("[INFO] cleaning up...")
 writer.release()
 vs.release()
-
+    
