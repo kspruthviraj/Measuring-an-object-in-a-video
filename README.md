@@ -3,7 +3,7 @@ Youtube video : https://youtu.be/hA9fFyuoLXk
 
 # Detecting and measuring rice seeds. 
 
-This is a python script to measure objects in a video with respect to a reference image. Note that in the GIF, the measurement is changing , and this is because of moving camera.
+This is a python script to measure objects in a video with respect to a reference image. Note that in the GIF, the measurement is changing slightly , and this is because of moving camera.
 
 To run the code:
 
