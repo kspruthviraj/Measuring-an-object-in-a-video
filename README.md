@@ -1,6 +1,8 @@
 # Measuring-an-object-in-a-video
 Youtube video : https://youtu.be/hA9fFyuoLXk
 
+# Detecting and measuring rice seeds. 
+
 This is a python script to measure objects in a video with respect to a refernce image.
 
 To run the code:
